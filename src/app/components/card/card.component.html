@@ -1,0 +1,39 @@
+<div class="card-container">
+  <mat-card class="card" *ngFor="let card of cards">
+    <mat-card-header>
+      <mat-card-title>{{ card.name }}</mat-card-title>
+      <mat-card-subtitle>{{ card.price }}</mat-card-subtitle>
+    </mat-card-header>
+    <img mat-card-image [src]="card.imageUrl" alt="card">
+    <mat-card-content>
+    </mat-card-content>
+  </mat-card>
+</div>
+
+<div class="card-container">
+  <section>
+    <!--In your example, you're using the <form> element to define the form and #cardForm="ngForm" to create a template reference variable for the entire form. -->
+    <form #cardForm="ngForm" (ngSubmit)="onSubmit()">
+      <mat-form-field appearance="fill">
+        <mat-label>Title</mat-label>
+        <input type="text" matInput name="name" required >
+      </mat-form-field>
+
+      <mat-form-field appearance="fill">
+        <mat-label>Price</mat-label>
+        <input type="number" matInput name="price" required >
+      </mat-form-field>
+
+      <mat-form-field appearance="fill">
+        <mat-label>Image URL</mat-label>
+        <input type="text" matInput name="imageUrl" required >
+      </mat-form-field>
+
+      <button mat-raised-button color="primary" type="submit">Add Card</button>
+    </form>
+  </section>
+</div>
+
+
+
+

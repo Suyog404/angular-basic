@@ -1,0 +1,11 @@
+// card.component.scss
+.card-container {
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+}
+
+.card {
+  max-width: 400px;
+  margin: 5px;
+}

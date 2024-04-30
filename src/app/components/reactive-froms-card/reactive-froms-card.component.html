@@ -1,0 +1,36 @@
+<div class="card-container">
+  <mat-card class="card" *ngFor="let card of cards3">
+    <mat-card-header>
+      <mat-card-title>{{ card.name }}</mat-card-title>
+      <mat-card-subtitle>{{ card.price }}</mat-card-subtitle>
+    </mat-card-header>
+    <img mat-card-image [src]="card.imageUrl" alt="card">
+    <mat-card-content>
+    </mat-card-content>
+  </mat-card>
+</div>
+
+
+<form [formGroup]="cardForm" (ngSubmit)="onSubmit()">
+  <mat-form-field appearance="fill">
+    <mat-label>Title</mat-label>
+    <input type="text" matInput formControlName="name" required>
+  </mat-form-field>
+
+  <mat-form-field appearance="fill">
+    <mat-label>Price</mat-label>
+    <input type="number" matInput formControlName="price" required min="0">
+  </mat-form-field>
+
+  <mat-form-field appearance="fill">
+    <mat-label>Image URL</mat-label>
+    <input type="text" matInput formControlName="imageUrl" required>
+  </mat-form-field>
+
+  <mat-form-field appearance="fill">
+    <mat-label>Description (Optional)</mat-label>
+    <input type="text" matInput formControlName="description">
+  </mat-form-field>
+
+  <button mat-raised-button color="primary" type="submit" [disabled]="cardForm.invalid">Add Card</button>
+</form>

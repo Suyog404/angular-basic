@@ -1,0 +1,37 @@
+<div class="card-container">
+  <mat-card class="card" *ngFor="let card of cards2">
+    <mat-card-header>
+      <mat-card-title>{{ card.name }}</mat-card-title>
+      <mat-card-subtitle>{{ card.price }}</mat-card-subtitle>
+    </mat-card-header>
+    <img mat-card-image [src]="card.imageUrl" alt="card">
+    <mat-card-content>
+    </mat-card-content>
+  </mat-card>
+</div>
+
+
+<!--[(ngModel)] with each input field and bound it to the corresponding property in the component class (cardName, cardPrice, cardImageUrl-->
+<!-- This eliminates the need to access the form object (this.cardForm.value) in the onSubmit method for these specific fields. -->
+<div class="card-container">
+  <section>
+    <form (ngSubmit)="onSubmitNgModelExample()">
+      <mat-form-field appearance="fill">
+        <mat-label>Title</mat-label>
+        <input type="text" matInput name="name" [(ngModel)]="cardName" required>
+      </mat-form-field>
+
+      <mat-form-field appearance="fill">
+        <mat-label>Price</mat-label>
+        <input type="number" matInput name="price" [(ngModel)]="cardPrice" required >
+      </mat-form-field>
+
+      <mat-form-field appearance="fill">
+        <mat-label>Image URL</mat-label>
+        <input type="text" matInput name="imageUrl" [(ngModel)]="cardImageUrl" required >
+      </mat-form-field>
+
+      <button mat-raised-button color="primary" type="submit">Add Card</button>
+    </form>
+  </section>
+</div>
