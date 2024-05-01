@@ -15,21 +15,21 @@ import {ReactiveFromsCardComponent} from "./components/reactive-froms-card/react
 })
 export class AppComponent {
   title = 'angular-basic';
-  cards: Card[] = [];
+  pcards: Card[] = [];
+  pcards2: Card[] = [];
+  pcards3: Card[] = [];
 
   addCard(updatedCard: Card[]) {
-    // console.log(updatedCard);
-   this.cards= updatedCard;
-   // localStorage.setItem('cards', JSON.stringify(this.cards)); // Update Local Storage
+   this.pcards= updatedCard;
+    localStorage.setItem('cards', JSON.stringify(this.pcards)); // Update Local Storage
   }
-  addCard2(updatedCard2forngModel: Card[]) {
-    // console.log(updatedCard);
-    this.cards= updatedCard2forngModel;
-    localStorage.setItem('cards', JSON.stringify(this.cards)); // Update Local Storage
+  addCard2(updatedCard2ForngModel:Card[]) {
+    this.pcards2= updatedCard2ForngModel;
+    localStorage.setItem('cards', JSON.stringify(this.pcards2)); // Update Local Storage
   }
 
-  addCard3(updatedCardReactiveForm: Card[]){
-    this.cards= updatedCardReactiveForm;
-    localStorage.setItem('cards', JSON.stringify(this.cards)); // Update Local Storage
+  addCard3(updatedCardReactiveForm:Card[]){
+    this.pcards3= updatedCardReactiveForm;
+    localStorage.setItem('cards', JSON.stringify(this.pcards3)); // Update Local Storage
   }
 }

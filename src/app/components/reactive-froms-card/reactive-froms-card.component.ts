@@ -4,7 +4,6 @@ import {MatInputModule} from "@angular/material/input";
 import {Card} from "../card/card.model";
 import {FormBuilder, FormGroup, ReactiveFormsModule, Validators} from "@angular/forms";
 import {MatCardModule} from "@angular/material/card";
-import {Card3} from "./reactiveFromCard.model";
 
 @Component({
   selector: 'app-reactive-froms-card',
@@ -15,7 +14,7 @@ import {Card3} from "./reactiveFromCard.model";
 })
 export class ReactiveFromsCardComponent {
 
-  @Input() cards3: Card3[] = [];
+  @Input() cards3: Card[] = [];
 
   @Output() titleEvent3$ = new EventEmitter<Card[]>();
 

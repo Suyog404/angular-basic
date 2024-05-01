@@ -16,17 +16,17 @@
     <form #cardForm="ngForm" (ngSubmit)="onSubmit()">
       <mat-form-field appearance="fill">
         <mat-label>Title</mat-label>
-        <input type="text" matInput name="name" required >
+        <input type="text" ngModel matInput name="name" required >
       </mat-form-field>
 
       <mat-form-field appearance="fill">
         <mat-label>Price</mat-label>
-        <input type="number" matInput name="price" required >
+        <input type="number"  ngModel matInput name="price" required >
       </mat-form-field>
 
       <mat-form-field appearance="fill">
         <mat-label>Image URL</mat-label>
-        <input type="text" matInput name="imageUrl" required >
+        <input type="text" ngModel matInput name="imageUrl" required >
       </mat-form-field>
 
       <button mat-raised-button color="primary" type="submit">Add Card</button>

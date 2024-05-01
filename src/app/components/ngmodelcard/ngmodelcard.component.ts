@@ -6,7 +6,6 @@ import {MatButtonModule} from "@angular/material/button";
 import {MatFormFieldModule} from "@angular/material/form-field";
 import {MatInputModule} from "@angular/material/input";
 import {MatCardModule} from "@angular/material/card";
-import {Card2} from "./ngmodelcard.model";
 
 @Component({
   selector: 'app-ngmodelcard',
@@ -16,7 +15,7 @@ import {Card2} from "./ngmodelcard.model";
   styleUrls: ['./ngmodelcard.component.scss']
 })
 export class NgmodelcardComponent {
-  @Input() cards2: Card2[] = []; // Array to hold cards
+  @Input() cards2: Card[] = []; // Array to hold cards
   @Output() titleEvent2$ = new EventEmitter<Card[]>();
 
   //only for ngModel example
